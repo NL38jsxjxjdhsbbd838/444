@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  telegram-bot:
+    build: .
+    container_name: telegram-bot
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      API_ID: "1234567"                     # 
+      API_HASH: "abcdef1234567890abcdef1234567890"  # 
+      BASE_DELAY: "30"
+      HAPPY_HASH: "299684e7ef31cdc767771546e167e0e6"
+      HAPPY_ID: "20220057"
+      PORT: "8080"
+
